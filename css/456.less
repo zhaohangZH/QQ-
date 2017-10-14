@@ -8,6 +8,7 @@ html,body{
   font-size: 14px;
   color: #b3b3b3;
 }
+
 .pimg(@w,@t){
   background: url("../img/navli.png")no-repeat @w @t;
 }
@@ -40,11 +41,11 @@ html,body{
   margin: 25px;
 }
 .ul{
-  float: left;
+  position: absolute;
   width: 409px;
   height: 180px;
-  margin-top: 25px;
-  margin-left: 10px;
+  top: 25px;
+  left: 125px;
   border-left:1px solid #d3d3d3;
 }
 //内容-右边ul
@@ -376,7 +377,7 @@ html,body{
               }
             }
             .behind{
-              .ul;
+              height: 280px;
               li{
                 margin-left:25px;
                 margin-bottom: 15px;
@@ -951,29 +952,30 @@ html,body{
             }
             //表情包
             .emoticon{
-              display: none;
+             // display: none;
               position: absolute;
               left:195px;
               top: 110px;
-              width: 380px;
-              height:280px;
+              width: 440px;
+              height:310px;
               background: #fff;
               //表情包头
               .hd{
-                width: 380px;
+                width: 440px;
                 border-bottom: 2px solid #F5F5F5;
                   &>ul{
-                    width: 360px;
+                    width: 420px;
                     height: 38px;
                     margin: 0 auto;
                     li{
+                      float: left;
                       margin-right:20px;
                       height: 38px;
                       cursor: pointer;
                       color: #b3b3b3;
                       font-size: 12px;
                       line-height: 38px;
-                      float: left;
+
                   }
                     .eve{
                       color: #3e3e3e;
@@ -987,43 +989,80 @@ html,body{
                   color: #318fe1;
                 }
               }
-              //表情包表情
-              .bq{
+              .face{
                 position: absolute;
                 display: none;
+                width: 420px;
+                height: 270px;
                 left: 10px;
-                width: 360px;
-                height: 192px;
-                text-align: center;
-                margin: 10px auto;
-                overflow: hidden;
-                li{
-                  float: left;
-                  width: 24px;
-                  height: 24px;
-                  &:hover{
-                    width: 22px;
-                    height: 22px;
-                    border: 1px solid blue;
+                border: 1px solid red;
+              }
+              .face-block{
+                display: block;
+              }
+              .common{
+
+                //表情包表情
+                .bq{
+                  position: absolute;
+                  display: none;
+                  width: 420px;
+                  height: 224px;
+                  text-align: center;
+                  margin: 10px auto;
+                  overflow: hidden;
+                  li{
+                    float: left;
+                    display: block;
+                    width: 28px;
+                    height: 28px;
+                    &>:hover{
+                      width: 26px;
+                      height: 26px;
+                      border: 1px solid blue;
+                    }
+                  }
+                }
+                .bq-block{
+                  display: block;
+                }
+                //左右翻页
+                .flip{
+                  position: absolute;
+                  right: 12px;
+                  bottom:13px;
+                  font-size: 12px;
+                  color: #3e3e3e;
+                  a{
+                    color:#318fe1;
+                  }
+                  .no{
+                    color: #a6a6a6;
+                    cursor:default;
                   }
                 }
               }
-              .bqk{
-                display: block;
-              }
-              //左右翻页
-              .flip{
-                position: absolute;
-                right: 12px;
-                bottom:13px;
-                font-size: 12px;
-                color: #3e3e3e;
-                a{
-                  color:#318fe1;
-                }
-                .no{
-                  color: #a6a6a6;
-                  cursor:default;
+              .interest{
+                .interest-li{
+                  position: absolute;
+                  width: 430px;
+                  margin: 10px auto;
+                  overflow: hidden;
+                    li{
+                      float: left;
+                      width: 93px;
+                      height: 93px;
+                      margin-right:12px;
+                      margin-bottom: 30px;
+                      border: 1px solid #a6a6a6;
+                      text-align: center;
+                      &>img{
+                        width: 93px;
+                        height: 93px;
+                      }
+
+                  }
+
                 }
               }
             }
